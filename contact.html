@@ -1,0 +1,54 @@
+<html>
+<!--Hassan Ali Gohal 439051263-->
+
+<head>
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="header">
+        <a href="homePage.html" class="logo"> DUNKIN’ </a>
+        <nav class="nav">
+            <a href="homePage.html">Homepage</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservations.html">Reservations</a>
+            <a href="about.html">About us</a>
+            <a href="#conact">Contact</a>
+
+        </nav>
+
+    </header>
+
+    <section>
+        <form id="form" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="button" onclick="submitForm()">Submit Message</button>
+        </form>
+    </section>
+
+    <script>
+        function submitForm() {
+            var form = document.getElementById("form");
+            if (form.checkValidity()) {
+                alert("submitted");
+            } else {
+                alert("please fill all fields");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
